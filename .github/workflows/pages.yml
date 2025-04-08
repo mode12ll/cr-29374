@@ -1,0 +1,72 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+<<<<<<< HEAD
+      - name: Create required directories
+=======
+      - name: Create placeholder directories
+>>>>>>> 21e91075dcd4f52c07a3f29a0658a2629965a610
+        run: |
+          mkdir -p images/logos images/fallbacks
+      - name: Create placeholder SVG
+        run: |
+          echo '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="60" viewBox="0 0 100 60"><rect width="100" height="60" fill="#F0F0F0"/><text x="50" y="30" font-family="Arial, sans-serif" font-size="10" fill="#888888" text-anchor="middle" alignment-baseline="middle">Logo</text></svg>' > images/logos/placeholder.svg
+      - name: Create car placeholder
+        run: |
+          echo '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450"><rect width="800" height="450" fill="#F3F4F6"/><text x="400" y="225" font-family="Arial, sans-serif" font-size="24" fill="#9CA3AF" text-anchor="middle" alignment-baseline="middle">Car Image Placeholder</text></svg>' > images/fallbacks/car-placeholder.jpg
+<<<<<<< HEAD
+      - name: Create image placeholder
+        run: |
+          echo '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450"><rect width="800" height="450" fill="#F3F4F6"/><text x="400" y="225" font-family="Arial, sans-serif" font-size="24" fill="#9CA3AF" text-anchor="middle" alignment-baseline="middle">Image Placeholder</text></svg>' > images/fallbacks/image-placeholder.jpg
+      - name: Create favicon
+        run: |
+          echo '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#0056b3"/><text x="16" y="20" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" alignment-baseline="middle">A</text></svg>' > images/favicon.png
+=======
+>>>>>>> 21e91075dcd4f52c07a3f29a0658a2629965a610
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          # Upload entire repository
+          path: '.'
+<<<<<<< HEAD
+=======
+      - name: Update repository references
+        run: |
+          find . -type f -name "*.html" -exec sed -i 's/car-marketplace/cr-29374/g' {} \;
+          find . -type f -name "*.md" -exec sed -i 's/car-marketplace/cr-29374/g' {} \;
+          find . -type f -name "*.js" -exec sed -i 's/car-marketplace/cr-29374/g' {} \;
+>>>>>>> 21e91075dcd4f52c07a3f29a0658a2629965a610
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

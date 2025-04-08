@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Marketplace - Find Your Perfect Vehicle</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles/global-static.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" alt="Car Marketplace" class="logo-image">
+        <span class="logo-text">Car Marketplace</span>
+      </a>
+      
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="cars.html" class="nav-link">Browse Cars</a>
+        <a href="sell.html" class="nav-link">Sell Your Car</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      
+      <div class="auth-buttons">
+        <a href="login.html" class="btn btn-secondary">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+    </div>
+  </nav>
+  
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Find Your Perfect Car</h1>
+          <p>Browse thousands of cars from trusted sellers across the country</p>
+          <div class="search-bar hero-search">
+            <form>
+              <div class="search-main">
+                <input
+                  type="text"
+                  name="query"
+                  placeholder="Search by make, model, or keyword..."
+                  class="search-input"
+                />
+                <button type="submit" class="search-button">Search</button>
+                <button type="button" class="advanced-toggle">More filters</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="featured-section">
+      <div class="container">
+        <h2 class="section-title">Featured Vehicles</h2>
+        <div class="car-grid">
+          <!-- Car Card 1 -->
+          <div class="car-card">
+            <div class="car-image-container">
+              <img 
+                src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="BMW 3 Series"
+                class="car-image"
+              />
+              <span class="featured-badge">Featured</span>
+            </div>
+            
+            <div class="car-details">
+              <div class="car-header">
+                <h3 class="car-title">BMW 3 Series</h3>
+                <p class="car-price">$45,999</p>
+              </div>
+              
+              <div class="car-specs">
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-cog"></i></span>
+                  <span>Automatic</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-calendar-alt"></i></span>
+                  <span>2022</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-road"></i></span>
+                  <span>12,500 mi</span>
+                </div>
+              </div>
+              
+              <a href="cars/1.html" class="view-details-btn">View Details</a>
+            </div>
+          </div>
+          
+          <!-- Car Card 2 -->
+          <div class="car-card">
+            <div class="car-image-container">
+              <img 
+                src="https://images.unsplash.com/photo-1561733179-584471270b35?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Tesla Model 3"
+                class="car-image"
+              />
+              <span class="featured-badge">Featured</span>
+            </div>
+            
+            <div class="car-details">
+              <div class="car-header">
+                <h3 class="car-title">Tesla Model 3</h3>
+                <p class="car-price">$52,990</p>
+              </div>
+              
+              <div class="car-specs">
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-bolt"></i></span>
+                  <span>Electric</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-calendar-alt"></i></span>
+                  <span>2023</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-road"></i></span>
+                  <span>5,000 mi</span>
+                </div>
+              </div>
+              
+              <a href="cars/2.html" class="view-details-btn">View Details</a>
+            </div>
+          </div>
+          
+          <!-- Car Card 3 -->
+          <div class="car-card">
+            <div class="car-image-container">
+              <img 
+                src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Audi Q5"
+                class="car-image"
+              />
+            </div>
+            
+            <div class="car-details">
+              <div class="car-header">
+                <h3 class="car-title">Audi Q5</h3>
+                <p class="car-price">$49,500</p>
+              </div>
+              
+              <div class="car-specs">
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-cog"></i></span>
+                  <span>Automatic</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-calendar-alt"></i></span>
+                  <span>2021</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-road"></i></span>
+                  <span>18,700 mi</span>
+                </div>
+              </div>
+              
+              <a href="cars/3.html" class="view-details-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="info-section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-car"></i></div>
+            <h3>Wide Selection</h3>
+            <p>Choose from thousands of certified and verified vehicles</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Trusted Sellers</h3>
+            <p>Every seller is verified and reviewed by our community</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-tag"></i></div>
+            <h3>Great Deals</h3>
+            <p>Find competitive prices and special offers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="latest-section">
+      <div class="container">
+        <h2 class="section-title">Latest Additions</h2>
+        <div class="car-grid">
+          <!-- Latest Car 1 -->
+          <div class="car-card">
+            <div class="car-image-container">
+              <img 
+                src="https://images.unsplash.com/photo-1617814076941-251d99aec70a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Mercedes-Benz E-Class"
+                class="car-image"
+              />
+            </div>
+            
+            <div class="car-details">
+              <div class="car-header">
+                <h3 class="car-title">Mercedes-Benz E-Class</h3>
+                <p class="car-price">$62,000</p>
+              </div>
+              
+              <div class="car-specs">
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-cog"></i></span>
+                  <span>Automatic</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-calendar-alt"></i></span>
+                  <span>2022</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-road"></i></span>
+                  <span>9,800 mi</span>
+                </div>
+              </div>
+              
+              <a href="cars/4.html" class="view-details-btn">View Details</a>
+            </div>
+          </div>
+          
+          <!-- Latest Car 2 -->
+          <div class="car-card">
+            <div class="car-image-container">
+              <img 
+                src="https://images.unsplash.com/photo-1581540222194-0def2d24a8c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Toyota RAV4"
+                class="car-image"
+              />
+            </div>
+            
+            <div class="car-details">
+              <div class="car-header">
+                <h3 class="car-title">Toyota RAV4</h3>
+                <p class="car-price">$39,500</p>
+              </div>
+              
+              <div class="car-specs">
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-cog"></i></span>
+                  <span>Automatic</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-calendar-alt"></i></span>
+                  <span>2023</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-road"></i></span>
+                  <span>3,200 mi</span>
+                </div>
+              </div>
+              
+              <a href="cars/5.html" class="view-details-btn">View Details</a>
+            </div>
+          </div>
+          
+          <!-- Latest Car 3 -->
+          <div class="car-card">
+            <div class="car-image-container">
+              <img 
+                src="https://images.unsplash.com/photo-1598261816014-6f4dbfc371fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Honda Civic"
+                class="car-image"
+              />
+            </div>
+            
+            <div class="car-details">
+              <div class="car-header">
+                <h3 class="car-title">Honda Civic</h3>
+                <p class="car-price">$28,900</p>
+              </div>
+              
+              <div class="car-specs">
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-cog"></i></span>
+                  <span>Automatic</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-calendar-alt"></i></span>
+                  <span>2023</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-icon"><i class="fas fa-road"></i></span>
+                  <span>1,500 mi</span>
+                </div>
+              </div>
+              
+              <a href="cars/6.html" class="view-details-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Sell Your Car?</h2>
+          <p>List your vehicle and reach thousands of potential buyers</p>
+          <a href="sell.html" class="btn btn-primary btn-large">Sell Your Car</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-section">
+        <h3>Car Marketplace</h3>
+        <p>Find your perfect ride or sell your vehicle with ease.</p>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cars.html">Browse Cars</a></li>
+          <li><a href="sell.html">Sell Your Car</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <address>
+          <p>123 Auto Avenue</p>
+          <p>Car City, CC 12345</p>
+          <p>Email: info@carmarketplace.com</p>
+          <p>Phone: (123) 456-7890</p>
+        </address>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2023 Car Marketplace. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

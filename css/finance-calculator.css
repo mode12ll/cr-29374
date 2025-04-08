@@ -1,0 +1,822 @@
+/* Finance Calculator Page Specific Styles */
+
+.finance-calculator-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Calculator Container */
+.calculator-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Calculator Inputs */
+.calculator-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-section {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.input-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    color: var(--primary-color);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input-group input[type="number"],
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.input-group input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #888;
+}
+
+.calculator-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.calculator-actions button {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* Calculator Results */
+.calculator-results {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.results-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+}
+
+.results-header h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.result-card {
+    padding: 25px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+}
+
+.result-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.result-label {
+    color: #666;
+    font-size: 16px;
+}
+
+.result-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.payment-frequency {
+    font-size: 14px;
+    color: #888;
+    margin-left: 5px;
+}
+
+.loan-amount .result-value {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.result-separator {
+    height: 1px;
+    background: #eee;
+    margin: 20px 0;
+}
+
+.graph-container {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.graph-container h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: var(--dark-color);
+}
+
+.repayment-chart {
+    height: 250px;
+}
+
+.calculator-notes {
+    padding: 15px 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #666;
+}
+
+.next-steps {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.next-steps h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: var(--dark-color);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.step-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: var(--transition);
+}
+
+.step-card:hover {
+    background: #e9f0f8;
+    transform: translateY(-3px);
+}
+
+.step-card i {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* FAQs Section */
+.finance-faqs {
+    padding: 60px 0;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    background: white;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.toggle-icon {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .toggle-icon i {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    background: #f9f9f9;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 20px;
+    max-height: 200px;
+}
+
+.faq-answer p {
+    margin: 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator-actions {
+        flex-direction: column;
+    }
+    
+    .calculator-container {
+        padding: 20px;
+    }
+    
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .result-value {
+        margin-top: 5px;
+    }
+}
+
+/**
+ * Finance Calculator Styles
+ */
+
+/* Calculator Header */
+.calculator-header {
+    background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.9)), 
+                url('../images/finance-calculator-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.calculator-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.calculator-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Calculator Section */
+.finance-calculator-section {
+    padding: 60px 0;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Calculator Form */
+.calculator-form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-form h2 {
+    font-size: 1.75rem;
+    color: var(--dark-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 0.9rem;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 12px;
+    padding-left: 34px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-with-icon input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+    outline: none;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236c757d' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+    outline: none;
+}
+
+/* Calculator Results */
+.calculator-results {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-results h2 {
+    font-size: 1.75rem;
+    color: var(--dark-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.result-highlight {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.result-highlight .result-label {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.result-highlight .result-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.results-details {
+    margin-bottom: 25px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.result-row:last-child {
+    border-bottom: none;
+}
+
+.result-row .result-label {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.result-row .result-value {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Payment Chart */
+.payment-chart-container {
+    margin-bottom: 25px;
+}
+
+.payment-chart-container h3 {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.payment-chart {
+    margin-top: 15px;
+}
+
+.chart-bar {
+    display: flex;
+    height: 40px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.chart-segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    font-weight: 600;
+    transition: width 0.5s ease;
+}
+
+.chart-segment.principal {
+    background-color: var(--primary-color);
+}
+
+.chart-segment.interest {
+    background-color: var(--warning-color);
+}
+
+/* Loan Schedule */
+.loan-schedule-preview {
+    margin-top: 30px;
+}
+
+.loan-schedule-preview h3 {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.loan-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.loan-table th {
+    background-color: #f8f9fa;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--dark-color);
+    border-bottom: 2px solid #eee;
+}
+
+.loan-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: var(--secondary-color);
+}
+
+.loan-table tr:last-child td {
+    border-bottom: none;
+}
+
+.loan-table tr:hover td {
+    background-color: #f8f9fa;
+}
+
+/* Calculator Tips */
+.calculator-tips {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.calculator-tips h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 40px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.tip-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tip-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.tip-card h3 {
+    font-size: 1.3rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.tip-card p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Modal */
+.amortization-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+.amortization-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    transition: transform 0.3s;
+}
+
+.amortization-modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.modal-body {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.modal-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.summary-item {
+    text-align: center;
+}
+
+.summary-label {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.summary-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.full-schedule-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.loan-table.full-schedule th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+    z-index: 1;
+}
+
+.modal-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Animation for calculation result */
+@keyframes highlight {
+    0% {
+        background-color: var(--primary-color);
+    }
+    50% {
+        background-color: var(--secondary-color);
+    }
+    100% {
+        background-color: var(--primary-color);
+    }
+}
+
+.calculated {
+    animation: highlight 0.5s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .calculator-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculator-header h1 {
+        font-size: 2rem;
+    }
+    
+    .calculator-header p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .modal-summary {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .calculator-header, .finance-calculator-section, .calculator-tips {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .calculator-form, .calculator-results {
+        padding: 20px;
+    }
+    
+    .result-highlight .result-value {
+        font-size: 2rem;
+    }
+    
+    .modal-summary {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .loan-table {
+        font-size: 0.875rem;
+    }
+    
+    .loan-table th, .loan-table td {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AutoMarket</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>AutoMarket</h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="search.html">Search Cars</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="compare.html">Compare</a></li>
+                        <li><a href="news.html">News & Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline active">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-container">
+                    <div class="auth-image">
+                        <img src="./images/login-image.jpg" alt="Car interior dashboard">
+                        <div class="auth-overlay">
+                            <div class="auth-text">
+                                <h2>Welcome Back</h2>
+                                <p>Sign in to access your saved cars, manage listings, and more.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="auth-form">
+                        <div class="form-header">
+                            <h2>Sign In</h2>
+                            <p>Don't have an account? <a href="register.html">Register now</a></p>
+                        </div>
+                        
+                        <div class="social-auth">
+                            <button class="btn-social btn-google">
+                                <i class="fab fa-google"></i>
+                                <span>Continue with Google</span>
+                            </button>
+                            <button class="btn-social btn-facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Continue with Facebook</span>
+                            </button>
+                        </div>
+                        
+                        <div class="divider">
+                            <span>or sign in with email</span>
+                        </div>
+                        
+                        <form id="login-form">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" name="password" placeholder="Your password" required>
+                                    <button type="button" class="toggle-password">
+                                        <i class="far fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-options">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="remember" name="remember">
+                                    <label for="remember">Remember me</label>
+                                </div>
+                                <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                            </div>
+                        </form>
+                        
+                        <div class="login-options">
+                            <p>Dealer or business? <a href="business-login.html">Sign in here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoMarket</h3>
+                    <p>Find your perfect car with AutoMarket, Australia's premier car marketplace.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="search.html">Search Cars</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoMarket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/auth.js"></script>
+</body>
+</html>

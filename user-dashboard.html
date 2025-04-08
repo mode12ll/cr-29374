@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - AutoMarket</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/user-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>AutoMarket</h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="search.html">Search Cars</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="compare.html">Compare</a></li>
+                        <li><a href="news.html">News & Reviews</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Tools <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="finance-calculator.html">Finance Calculator</a>
+                                <a href="price-guide.html">Price Guide</a>
+                                <a href="fuel-calculator.html">Fuel Cost Calculator</a>
+                                <a href="history-check.html">Vehicle History Check</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="auth-buttons">
+                    <div class="dropdown user-menu">
+                        <button class="dropdown-toggle">
+                            <img src="./images/user-avatar.jpg" alt="User" class="user-avatar">
+                            <span class="user-name">John Smith</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="user-dashboard.html" class="active">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                            <a href="profile.html">
+                                <i class="fas fa-user"></i> My Profile
+                            </a>
+                            <a href="settings.html">
+                                <i class="fas fa-cog"></i> Settings
+                            </a>
+                            <a href="index.html">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="dashboard-grid">
+                <aside class="dashboard-sidebar">
+                    <div class="user-info">
+                        <div class="user-avatar-lg">
+                            <img src="./images/user-avatar.jpg" alt="John Smith">
+                        </div>
+                        <h2>John Smith</h2>
+                        <p>Member since June 2023</p>
+                    </div>
+                    
+                    <nav class="dashboard-nav">
+                        <ul>
+                            <li class="active">
+                                <a href="#overview">
+                                    <i class="fas fa-home"></i>
+                                    <span>Dashboard Overview</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#saved-cars">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Saved Cars</span>
+                                    <span class="count">12</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#my-listings">
+                                    <i class="fas fa-car"></i>
+                                    <span>My Listings</span>
+                                    <span class="count">2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#saved-searches">
+                                    <i class="fas fa-search"></i>
+                                    <span>Saved Searches</span>
+                                    <span class="count">3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#alerts">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Price Alerts</span>
+                                    <span class="count">5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#messages">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Messages</span>
+                                    <span class="badge">2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#profile">
+                                    <i class="fas fa-user"></i>
+                                    <span>My Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#settings">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Account Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+                
+                <div class="dashboard-content">
+                    <div class="dashboard-section active" id="overview-section">
+                        <div class="section-header">
+                            <h1>Dashboard Overview</h1>
+                        </div>
+                        
+                        <div class="overview-cards">
+                            <div class="overview-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h3>My Listings</h3>
+                                    <p class="count">2</p>
+                                </div>
+                                <a href="#my-listings" class="card-link">View All</a>
+                            </div>
+                            
+                            <div class="overview-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h3>Saved Cars</h3>
+                                    <p class="count">12</p>
+                                </div>
+                                <a href="#saved-cars" class="card-link">View All</a>
+                            </div>
+                            
+                            <div class="overview-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h3>Price Alerts</h3>
+                                    <p class="count">5</p>
+                                </div>
+                                <a href="#alerts" class="card-link">View All</a>
+                            </div>
+                            
+                            <div class="overview-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h3>New Messages</h3>
+                                    <p class="count">2</p>
+                                </div>
+                                <a href="#messages" class="card-link">View All</a>
+                            </div>
+                        </div>
+                        
+                        <div class="recent-activity">
+                            <div class="section-subtitle">
+                                <h2>Recent Activity</h2>
+                            </div>
+                            
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p>You saved <strong>BMW X5 2021</strong> to your favorites</p>
+                                        <span class="activity-time">2 hours ago</span>
+                                    </div>
+                                    <a href="#" class="activity-action">View Car</a>
+                                </div>
+                                
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p>You created a new saved search for <strong>Toyota Hybrids under $30,000</strong></p>
+                                        <span class="activity-time">Yesterday</span>
+                                    </div>
+                                    <a href="#" class="activity-action">View Results</a>
+                                </div>
+                                
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p>Your listing <strong>Honda Civic 2020</strong> received a new inquiry</p>
+                                        <span class="activity-time">2 days ago</span>
+                                    </div>
+                                    <a href="#" class="activity-action">View Message</a>
+                                </div>
+                                
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-bell"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p>Price drop alert: <strong>Mazda CX-5 2021</strong> is now $2,000 cheaper</p>
+                                        <span class="activity-time">3 days ago</span>
+                                    </div>
+                                    <a href="#" class="activity-action">View Car</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="car-recommendations">
+                            <div class="section-subtitle">
+                                <h2>Recommended For You</h2>
+                                <a href="#" class="view-all">View More</a>
+                            </div>
+                            
+                            <div class="car-grid">
+                                <div class="car-card">
+                                    <div class="car-image">
+                                        <img src="./images/car1.jpg" alt="Toyota Camry Hybrid 2022">
+                                        <span class="tag">New Listing</span>
+                                        <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                                    </div>
+                                    <div class="car-details">
+                                        <h3>Toyota Camry Hybrid 2022</h3>
+                                        <p class="price">$32,990</p>
+                                        <div class="specs">
+                                            <span><i class="fas fa-tachometer-alt"></i> 15,000 km</span>
+                                            <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                                            <span><i class="fas fa-cog"></i> Automatic</span>
+                                        </div>
+                                        <div class="location"><i class="fas fa-map-marker-alt"></i> Sydney, NSW</div>
+                                        <div class="car-actions">
+                                            <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                                            <button class="btn btn-compare"><i class="fas fa-exchange-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="car-card">
+                                    <div class="car-image">
+                                        <img src="./images/car2.jpg" alt="Mazda CX-5 2021">
+                                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                                    </div>
+                                    <div class="car-details">
+                                        <h3>Mazda CX-5 Touring 2021</h3>
+                                        <p class="price">$36,490</p>
+                                        <div class="specs">
+                                            <span><i class="fas fa-tachometer-alt"></i> 22,500 km</span>
+                                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                            <span><i class="fas fa-cog"></i> Automatic</span>
+                                        </div>
+                                        <div class="location"><i class="fas fa-map-marker-alt"></i> Melbourne, VIC</div>
+                                        <div class="car-actions">
+                                            <a href="car-detail.html" class="btn btn-outline">View Details</a>
+                                            <button class="btn btn-compare"><i class="fas fa-exchange-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-section" id="saved-cars-section">
+                        <div class="section-header">
+                            <h1>Saved Cars</h1>
+                            <div class="section-actions">
+                                <button class="btn btn-outline btn-sm"><i class="fas fa-filter"></i> Filter</button>
+                                <button class="btn btn-outline btn-sm"><i class="fas fa-sort"></i> Sort</button>
+                            </div>
+                        </div>
+                        
+                        <div class="saved-cars-container">
+                            <div class="car-grid">
+                                <!-- Saved cars would be displayed here in car cards -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-section" id="my-listings-section">
+                        <div class="section-header">
+                            <h1>My Listings</h1>
+                            <div class="section-actions">
+                                <a href="sell.html" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-plus"></i> Add New Listing
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="listings-container">
+                            <div class="listing-card">
+                                <div class="listing-image">
+                                    <img src="./images/car3.jpg" alt="Honda Civic 2020">
+                                    <span class="status active">Active</span>
+                                </div>
+                                <div class="listing-details">
+                                    <h3>Honda Civic RS 2020</h3>
+                                    <p class="price">$28,500</p>
+                                    <div class="listing-stats">
+                                        <div class="stat">
+                                            <span class="stat-label">Views</span>
+                                            <span class="stat-value">143</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-label">Inquiries</span>
+                                            <span class="stat-value">5</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-label">Days Listed</span>
+                                            <span class="stat-value">12</span>
+                                        </div>
+                                    </div>
+                                    <div class="listing-actions">
+                                        <button class="btn btn-outline btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="btn btn-outline btn-sm"><i class="fas fa-chart-line"></i> View Stats</button>
+                                        <button class="btn btn-outline btn-sm"><i class="fas fa-bullhorn"></i> Promote</button>
+                                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="listing-card">
+                                <div class="listing-image">
+                                    <img src="./images/car4.jpg" alt="Toyota RAV4 2019">
+                                    <span class="status active">Active</span>
+                                </div>
+                                <div class="listing-details">
+                                    <h3>Toyota RAV4 GXL 2019</h3>
+                                    <p class="price">$32,750</p>
+                                    <div class="listing-stats">
+                                        <div class="stat">
+                                            <span class="stat-label">Views</span>
+                                            <span class="stat-value">89</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-label">Inquiries</span>
+                                            <span class="stat-value">2</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-label">Days Listed</span>
+                                            <span class="stat-value">8</span>
+                                        </div>
+                                    </div>
+                                    <div class="listing-actions">
+                                        <button class="btn btn-outline btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="btn btn-outline btn-sm"><i class="fas fa-chart-line"></i> View Stats</button>
+                                        <button class="btn btn-outline btn-sm"><i class="fas fa-bullhorn"></i> Promote</button>
+                                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoMarket</h3>
+                    <p>Find your perfect car with AutoMarket, Australia's premier car marketplace.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="search.html">Search Cars</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoMarket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/user-dashboard.js"></script>
+</body>
+</html>

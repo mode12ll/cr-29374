@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Placeholder Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .placeholder-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .placeholder {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        button {
+            background: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #003d7a;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Placeholder Images</h1>
+    
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <p>This utility creates placeholder images for the car marketplace. Click each "Download" button to save the image files to your computer, then place them in the images folder.</p>
+        <p>You need the following placeholder images:</p>
+        <ul>
+            <li>placeholder.jpg - Generic placeholder</li>
+            <li>car-placeholder.jpg - Car image placeholder</li>
+            <li>user-placeholder.jpg - User avatar placeholder</li>
+            <li>dealer-placeholder.jpg - Dealer logo placeholder</li>
+        </ul>
+    </div>
+    
+    <div class="placeholder-container">
+        <div class="placeholder">
+            <h2>Generic Placeholder</h2>
+            <canvas id="genericPlaceholder" width="400" height="300"></canvas>
+            <div>
+                <button onclick="downloadImage('genericPlaceholder', 'placeholder.jpg')">Download placeholder.jpg</button>
+            </div>
+        </div>
+        
+        <div class="placeholder">
+            <h2>Car Placeholder</h2>
+            <canvas id="carPlaceholder" width="600" height="400"></canvas>
+            <div>
+                <button onclick="downloadImage('carPlaceholder', 'car-placeholder.jpg')">Download car-placeholder.jpg</button>
+            </div>
+        </div>
+        
+        <div class="placeholder">
+            <h2>User Placeholder</h2>
+            <canvas id="userPlaceholder" width="200" height="200"></canvas>
+            <div>
+                <button onclick="downloadImage('userPlaceholder', 'user-placeholder.jpg')">Download user-placeholder.jpg</button>
+            </div>
+        </div>
+        
+        <div class="placeholder">
+            <h2>Dealer Placeholder</h2>
+            <canvas id="dealerPlaceholder" width="300" height="200"></canvas>
+            <div>
+                <button onclick="downloadImage('dealerPlaceholder', 'dealer-placeholder.jpg')">Download dealer-placeholder.jpg</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            createGenericPlaceholder();
+            createCarPlaceholder();
+            createUserPlaceholder();
+            createDealerPlaceholder();
+        });
+        
+        function createGenericPlaceholder() {
+            const canvas = document.getElementById('genericPlaceholder');
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#f0f0f0';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Text
+            ctx.fillStyle = '#999999';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('Image Placeholder', canvas.width/2, canvas.height/2);
+        }
+        
+        function createCarPlaceholder() {
+            const canvas = document.getElementById('carPlaceholder');
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#e3f2fd';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Car silhouette
+            ctx.fillStyle = '#1976d2';
+            
+            // Draw car body (simplified)
+            ctx.beginPath();
+            ctx.moveTo(150, 240);
+            ctx.lineTo(150, 220);
+            ctx.lineTo(200, 180);
+            ctx.lineTo(350, 180);
+            ctx.lineTo(400, 220);
+            ctx.lineTo(450, 220);
+            ctx.lineTo(450, 240);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Draw wheels
+            ctx.beginPath();
+            ctx.arc(200, 240, 30, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(400, 240, 30, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Text
+            ctx.fillStyle = '#1976d2';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('Car Placeholder', canvas.width/2, 100);
+        }
+        
+        function createUserPlaceholder() {
+            const canvas = document.getElementById('userPlaceholder');
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#f0f0f0';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // User silhouette
+            ctx.fillStyle = '#aaaaaa';
+            
+            // Draw head
+            ctx.beginPath();
+            ctx.arc(100, 70, 40, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Draw body
+            ctx.beginPath();
+            ctx.moveTo(100, 110);
+            ctx.lineTo(100, 180);
+            ctx.ellipse(100, 140, 50, 70, 0, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
+        function createDealerPlaceholder() {
+            const canvas = document.getElementById('dealerPlaceholder');
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#f0f0f0';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Storefront
+            ctx.fillStyle = '#888888';
+            
+            // Building
+            ctx.fillRect(75, 60, 150, 100);
+            
+            // Roof
+            ctx.beginPath();
+            ctx.moveTo(50, 60);
+            ctx.lineTo(150, 20);
+            ctx.lineTo(250, 60);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Door
+            ctx.fillStyle = '#555555';
+            ctx.fillRect(130, 110, 40, 50);
+            
+            // Windows
+            ctx.fillStyle = '#e3f2fd';
+            ctx.fillRect(90, 80, 30, 30);
+            ctx.fillRect(180, 80, 30, 30);
+            
+            // Text
+            ctx.fillStyle = '#555555';
+            ctx.font = 'bold 16px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('Dealer Placeholder', canvas.width/2, 180);
+        }
+        
+        function downloadImage(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/jpeg', 0.8);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

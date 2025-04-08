@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Cars - AutoMarket</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/compare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>AutoMarket</h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="search.html">Search Cars</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="compare.html" class="active">Compare</a></li>
+                        <li><a href="news.html">News & Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="compare-section">
+            <div class="container">
+                <div class="compare-header">
+                    <h1>Compare Cars</h1>
+                    <p>Compare up to three vehicles side-by-side to help you make the right choice.</p>
+                </div>
+                
+                <div class="compare-content" id="compare-content">
+                    <div class="empty-compare" id="empty-compare">
+                        <div class="empty-message">
+                            <i class="fas fa-exchange-alt"></i>
+                            <h2>No Cars Selected for Comparison</h2>
+                            <p>Add vehicles to compare by clicking "Add to Compare" on any vehicle listing.</p>
+                            <a href="search.html" class="btn btn-primary">Browse Cars</a>
+                        </div>
+                    </div>
+                    
+                    <div class="compare-table" id="compare-table" style="display: none;">
+                        <div class="compare-row header-row">
+                            <div class="compare-cell feature-cell">
+                                <button id="clear-all" class="btn btn-outline btn-sm">Clear All</button>
+                            </div>
+                            <div class="compare-cell car-cell" id="car-column-1">
+                                <div class="car-header">
+                                    <div class="car-image">
+                                        <img src="./images/car1.jpg" alt="Toyota Camry">
+                                    </div>
+                                    <h3>Toyota Camry 2022 Hybrid</h3>
+                                    <p class="price">$32,990</p>
+                                    <div class="car-actions">
+                                        <a href="car-detail.html" class="btn btn-primary btn-sm">View Details</a>
+                                        <button class="btn btn-outline btn-sm remove-car" data-car-id="car1"><i class="fas fa-times"></i> Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="compare-cell car-cell" id="car-column-2">
+                                <div class="car-header">
+                                    <div class="car-image">
+                                        <img src="./images/car2.jpg" alt="Mazda CX-5">
+                                    </div>
+                                    <h3>Mazda CX-5 2021 Touring</h3>
+                                    <p class="price">$36,490</p>
+                                    <div class="car-actions">
+                                        <a href="car-detail.html" class="btn btn-primary btn-sm">View Details</a>
+                                        <button class="btn btn-outline btn-sm remove-car" data-car-id="car2"><i class="fas fa-times"></i> Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="compare-cell car-cell empty-car" id="car-column-3">
+                                <div class="add-car-placeholder">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <p>Add another car</p>
+                                    <a href="search.html" class="btn btn-outline btn-sm">Browse Cars</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="compare-section-title">
+                            <h3>Overview</h3>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Make</span>
+                            </div>
+                            <div class="compare-cell">Toyota</div>
+                            <div class="compare-cell">Mazda</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Model</span>
+                            </div>
+                            <div class="compare-cell">Camry Hybrid</div>
+                            <div class="compare-cell">CX-5 Touring</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Year</span>
+                            </div>
+                            <div class="compare-cell">2022</div>
+                            <div class="compare-cell">2021</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Body Type</span>
+                            </div>
+                            <div class="compare-cell">Sedan</div>
+                            <div class="compare-cell">SUV</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-section-title">
+                            <h3>Performance</h3>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Engine</span>
+                            </div>
+                            <div class="compare-cell">2.5L Hybrid</div>
+                            <div class="compare-cell">2.5L 4-cylinder</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Power</span>
+                            </div>
+                            <div class="compare-cell">160kW combined</div>
+                            <div class="compare-cell">140kW</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Transmission</span>
+                            </div>
+                            <div class="compare-cell">CVT Automatic</div>
+                            <div class="compare-cell">6-speed Automatic</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Fuel Type</span>
+                            </div>
+                            <div class="compare-cell">Hybrid</div>
+                            <div class="compare-cell">Petrol</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Fuel Economy</span>
+                            </div>
+                            <div class="compare-cell">4.2L/100km</div>
+                            <div class="compare-cell">7.4L/100km</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-section-title">
+                            <h3>Dimensions</h3>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Length</span>
+                            </div>
+                            <div class="compare-cell">4,885mm</div>
+                            <div class="compare-cell">4,550mm</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Width</span>
+                            </div>
+                            <div class="compare-cell">1,840mm</div>
+                            <div class="compare-cell">1,840mm</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Height</span>
+                            </div>
+                            <div class="compare-cell">1,445mm</div>
+                            <div class="compare-cell">1,680mm</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Boot Capacity</span>
+                            </div>
+                            <div class="compare-cell">493L</div>
+                            <div class="compare-cell">442L</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-section-title">
+                            <h3>Features</h3>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Air Conditioning</span>
+                            </div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Dual Zone Climate Control</div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Dual Zone Climate Control</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Infotainment</span>
+                            </div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> 8-inch Touchscreen</div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> 10.25-inch Display</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Navigation</span>
+                            </div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Smartphone Integration</span>
+                            </div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Apple CarPlay & Android Auto</div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Apple CarPlay & Android Auto</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Sunroof</span>
+                            </div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Panoramic</div>
+                            <div class="compare-cell"><i class="fas fa-times text-danger"></i> Not Available</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Leather Seats</span>
+                            </div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-section-title">
+                            <h3>Safety</h3>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>ANCAP Rating</span>
+                            </div>
+                            <div class="compare-cell">★★★★★ 5 Stars</div>
+                            <div class="compare-cell">★★★★★ 5 Stars</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Autonomous Emergency Braking</span>
+                            </div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Lane Keep Assist</span>
+                            </div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Adaptive Cruise Control</span>
+                            </div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-cell feature-cell">
+                                <span>Blind Spot Monitoring</span>
+                            </div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell"><i class="fas fa-check text-success"></i> Included</div>
+                            <div class="compare-cell">-</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="compare-footer">
+                    <div class="share-buttons">
+                        <span>Share this comparison:</span>
+                        <button class="btn btn-outline btn-sm" id="copy-link"><i class="fas fa-link"></i> Copy Link</button>
+                        <button class="btn btn-outline btn-sm"><i class="fas fa-envelope"></i> Email</button>
+                        <button class="btn btn-outline btn-sm"><i class="fab fa-facebook"></i> Facebook</button>
+                        <button class="btn btn-outline btn-sm"><i class="fab fa-twitter"></i> Twitter</button>
+                    </div>
+                    <div class="print-button">
+                        <button class="btn btn-primary" id="print-comparison"><i class="fas fa-print"></i> Print Comparison</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="browse-cars">
+            <div class="container">
+                <h2>Not sure what to compare?</h2>
+                <p>Explore our most popular categories or search for specific models.</p>
+                <div class="category-buttons">
+                    <a href="search.html?body-type=sedan" class="category-btn">
+                        <i class="fas fa-car"></i>
+                        <span>Sedans</span>
+                    </a>
+                    <a href="search.html?body-type=suv" class="category-btn">
+                        <i class="fas fa-car-side"></i>
+                        <span>SUVs</span>
+                    </a>
+                    <a href="search.html?body-type=hatchback" class="category-btn">
+                        <i class="fas fa-car-alt"></i>
+                        <span>Hatchbacks</span>
+                    </a>
+                    <a href="search.html?type=electric" class="category-btn">
+                        <i class="fas fa-charging-station"></i>
+                        <span>Electric</span>
+                    </a>
+                    <a href="search.html?type=hybrid" class="category-btn">
+                        <i class="fas fa-leaf"></i>
+                        <span>Hybrids</span>
+                    </a>
+                    <a href="search.html?body-type=ute" class="category-btn">
+                        <i class="fas fa-truck-pickup"></i>
+                        <span>Utes</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoMarket</h3>
+                    <p>Find your perfect car with AutoMarket, Australia's premier car marketplace.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="search.html">Search Cars</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoMarket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification for Link Copied -->
+    <div class="notification" id="link-copied-notification">
+        <div class="notification-content">
+            <span>Comparison link copied to clipboard!</span>
+            <button class="notification-close">&times;</button>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/compare.js"></script>
+</body>
+</html>

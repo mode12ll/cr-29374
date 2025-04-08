@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Calculator - AutoMarket</title>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="./css/style.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/finance-calculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>AutoMarket</h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="search.html">Search Cars</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="compare.html">Compare</a></li>
+                        <li><a href="news.html">News & Reviews</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle active">Tools <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="finance-calculator.html" class="active">Finance Calculator</a>
+                                <a href="price-guide.html">Price Guide</a>
+                                <a href="fuel-calculator.html">Fuel Cost Calculator</a>
+                                <a href="history-check.html">Vehicle History Check</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator-header">
+            <div class="container">
+                <h1>Car Loan Calculator</h1>
+                <p>Estimate your monthly car loan payments and total cost with our easy-to-use calculator.</p>
+            </div>
+        </section>
+
+        <section class="finance-calculator-section">
+            <div class="container">
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <h2>Calculate Your Payments</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="car-price">Car Price</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <input type="number" id="car-price" placeholder="Enter car price" value="35000">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="down-payment">Down Payment</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <input type="number" id="down-payment" placeholder="Enter down payment" value="5000">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="trade-in-value">Trade-in Value</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <input type="number" id="trade-in-value" placeholder="Enter trade-in value" value="0">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="taxes-fees">Taxes & Fees (%)</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-percentage"></i>
+                                    <input type="number" id="taxes-fees" placeholder="Enter taxes & fees" value="10">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="interest-rate">Interest Rate (%)</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-percentage"></i>
+                                    <input type="number" id="interest-rate" step="0.1" placeholder="Enter interest rate" value="5.9">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="loan-term">Loan Term</label>
+                                <select id="loan-term">
+                                    <option value="24">24 months (2 years)</option>
+                                    <option value="36">36 months (3 years)</option>
+                                    <option value="48">48 months (4 years)</option>
+                                    <option value="60" selected>60 months (5 years)</option>
+                                    <option value="72">72 months (6 years)</option>
+                                    <option value="84">84 months (7 years)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button id="calculate-btn" class="btn btn-primary btn-block">Calculate Payment</button>
+                    </div>
+                    
+                    <div class="calculator-results">
+                        <h2>Loan Summary</h2>
+                        
+                        <div class="result-highlight">
+                            <div class="result-label">Monthly Payment</div>
+                            <div class="result-value" id="monthly-payment">$587.17</div>
+                        </div>
+                        
+                        <div class="results-details">
+                            <div class="result-row">
+                                <div class="result-label">Loan Amount</div>
+                                <div class="result-value" id="loan-amount">$33,000.00</div>
+                            </div>
+                            
+                            <div class="result-row">
+                                <div class="result-label">Total Interest</div>
+                                <div class="result-value" id="total-interest">$2,230.20</div>
+                            </div>
+                            
+                            <div class="result-row">
+                                <div class="result-label">Total Cost</div>
+                                <div class="result-value" id="total-cost">$35,230.20</div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-chart-container">
+                            <h3>Payment Breakdown</h3>
+                            <div class="payment-chart">
+                                <div class="chart-bar">
+                                    <div class="chart-segment principal" id="principal-segment" style="width: 85%;">
+                                        <span>Principal</span>
+                                    </div>
+                                    <div class="chart-segment interest" id="interest-segment" style="width: 15%;">
+                                        <span>Interest</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="loan-schedule-preview">
+                            <h3>Loan Schedule Preview</h3>
+                            <table class="loan-table">
+                                <thead>
+                                    <tr>
+                                        <th>Payment #</th>
+                                        <th>Payment</th>
+                                        <th>Principal</th>
+                                        <th>Interest</th>
+                                        <th>Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="loan-schedule-body">
+                                    <!-- Will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                            <button id="view-full-schedule" class="btn btn-outline btn-block">View Full Amortization Schedule</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="calculator-tips">
+            <div class="container">
+                <h2>Finance Calculator Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h3>Down Payment</h3>
+                        <p>A larger down payment reduces your loan amount and monthly payments, potentially saving you thousands in interest.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Loan Term</h3>
+                        <p>Shorter loan terms generally have lower interest rates but higher monthly payments. Find your sweet spot.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Interest Rate</h3>
+                        <p>Even a small reduction in interest rate can save you significantly over the life of your loan. Shop around for the best rates.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="fas fa-coins"></i></div>
+                        <h3>Additional Payments</h3>
+                        <p>Making extra payments toward your principal can help you pay off your loan faster and reduce total interest paid.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoMarket</h3>
+                    <p>Find your perfect car with AutoMarket, Australia's premier car marketplace.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="search.html">Search Cars</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="compare.html">Compare Cars</a></li>
+                        <li><a href="dealers.html">Find Dealers</a></li>
+                        <li><a href="news.html">News & Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Tools & Resources</h3>
+                    <ul>
+                        <li><a href="finance-calculator.html">Finance Calculator</a></li>
+                        <li><a href="price-guide.html">Price Guide</a></li>
+                        <li><a href="fuel-calculator.html">Fuel Cost Calculator</a></li>
+                        <li><a href="history-check.html">Vehicle History Check</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> 1800 CAR MARKET</p>
+                    <p><i class="fas fa-envelope"></i> info@automarket.com.au</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Car Street, Sydney, NSW 2000</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoMarket. All rights reserved.</p>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="amortization-modal" id="amortization-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Loan Amortization Schedule</h2>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-summary">
+                    <div class="summary-item">
+                        <div class="summary-label">Loan Amount</div>
+                        <div class="summary-value" id="modal-loan-amount">$33,000.00</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">Term</div>
+                        <div class="summary-value" id="modal-loan-term">60 months</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">Interest Rate</div>
+                        <div class="summary-value" id="modal-interest-rate">5.9%</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">Monthly Payment</div>
+                        <div class="summary-value" id="modal-monthly-payment">$587.17</div>
+                    </div>
+                </div>
+                
+                <div class="full-schedule-container">
+                    <table class="loan-table full-schedule">
+                        <thead>
+                            <tr>
+                                <th>Payment #</th>
+                                <th>Payment</th>
+                                <th>Principal</th>
+                                <th>Interest</th>
+                                <th>Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="full-schedule-body">
+                            <!-- Will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="print-schedule" class="btn btn-outline">
+                    <i class="fas fa-print"></i> Print Schedule
+                </button>
+                <button id="close-modal-btn" class="btn btn-primary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+    <script src="./js/finance-calculator.js"></script>
+</body>
+</html>

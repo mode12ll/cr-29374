@@ -1,0 +1,540 @@
+/* Vehicle History Check Page Styles */
+
+/* Hero Section */
+.history-hero {
+    background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 110, 230, 0.9)), url('../images/history-check-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.history-hero .hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.history-hero .hero-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.hero-features .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-features .feature i {
+    font-size: 36px;
+    background: rgba(255, 255, 255, 0.2);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+.hero-features .feature:hover i {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.hero-features .feature span {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Form Section */
+.history-check-form {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.form-container {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-size: 28px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+.form-group small {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.registration-inputs {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.check-options {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.check-options h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.report-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.report-option {
+    position: relative;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.report-option:hover {
+    border-color: #ddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.report-option.recommended {
+    border-color: var(--primary-color);
+}
+
+.report-option .badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.report-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.report-option input[type="radio"]:checked + label {
+    color: var(--primary-color);
+}
+
+.report-option input[type="radio"]:checked + label .option-header h4 {
+    color: var(--primary-color);
+}
+
+.report-option input[type="radio"]:checked + label .price {
+    color: var(--primary-color);
+}
+
+.option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.option-header h4 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--dark-color);
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.report-option ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.report-option ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+}
+
+.report-option ul li i {
+    color: var(--success-color);
+    width: 16px;
+}
+
+.report-option ul li.not-included {
+    color: #999;
+}
+
+.report-option ul li.not-included i {
+    color: #ddd;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.form-actions button {
+    padding: 15px;
+    font-size: 16px;
+}
+
+/* How It Works Section */
+.history-steps {
+    padding: 80px 0;
+    background: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 18px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+}
+
+.step-icon {
+    background: var(--primary-color);
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 40px;
+    transition: var(--transition);
+}
+
+.step:hover .step-icon {
+    transform: translateY(-10px);
+}
+
+.step h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.step p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* What We Check Section */
+.what-we-check {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.checks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.check-item {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.check-item:hover {
+    transform: translateY(-5px);
+}
+
+.check-item i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.check-item h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.check-item p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+    background: white;
+}
+
+.testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial {
+    padding: 0 20px;
+}
+
+.testimonial-content {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.testimonial-content:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 40px;
+    width: 30px;
+    height: 30px;
+    background: #f8f9fa;
+    transform: rotate(45deg);
+}
+
+.testimonial-content p {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.rating {
+    margin-top: 15px;
+}
+
+.rating i {
+    color: #ffc107;
+    margin-right: 3px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 20px;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-author h4 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--dark-color);
+}
+
+.testimonial-author p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.testimonial-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.prev-testimonial,
+.next-testimonial {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.prev-testimonial:hover,
+.next-testimonial:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 110, 230, 0.9)), url('../images/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+.call-to-action h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.call-to-action p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.call-to-action .btn {
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .steps-container {
+        flex-direction: column;
+        max-width: 500px;
+    }
+    
+    .report-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .history-hero .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .history-hero .hero-content p {
+        font-size: 16px;
+    }
+    
+    .form-container {
+        padding: 30px 20px;
+    }
+    
+    .hero-features {
+        gap: 20px;
+    }
+    
+    .hero-features .feature i {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .registration-inputs {
+        grid-template-columns: 1fr;
+    }
+}
